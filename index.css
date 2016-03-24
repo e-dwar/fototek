@@ -1,0 +1,397 @@
+/* Feuille de styles générale. */
+
+/* global */
+/* structure */
+/* popup */
+/* thumbnail */
+/* slideshow */
+/* login */
+
+/* global */
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    height: 100%;
+    min-width: 800px;
+    min-height: 400px;
+    padding: 0;
+    margin: 0;
+}
+
+body, button, input, select {
+    font: normal 14px "Arial";
+}
+
+form div {
+    padding-bottom: 1em;
+}
+
+fieldset {
+    padding-top: 1em;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.checkboxes div {
+    padding-bottom: .5em;
+}
+
+select {
+    padding: 1px;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    top: 1px;
+}
+
+h2 {
+    color: rgb(15, 70, 90);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+/* structure */
+
+.toolbar {
+    height: 56px;
+    line-height: 56px;
+    padding: 0 16px;
+}
+
+.buttons {
+    float: right;
+}
+
+.buttons button {
+    margin-left: .5em;
+}
+
+#top {
+    background: rgb(15, 70, 90);
+}
+
+#top span {
+    color: white;
+}
+
+#filters {
+    overflow: auto;
+    position: absolute;
+    top: 56px; bottom: 0;
+    left: 0; right: 0;
+    padding: 16px;
+    width: 288px; /* 320-16-16 */
+    vertical-align: top;
+    float: left;
+    background: rgb(231, 236, 237);
+}
+
+#filters label {
+    display: inline-block;
+    width: 88px;
+}
+
+#filters select {
+    width: 174px;
+}
+
+#filters input[type="text"] {
+    width: 170px;
+}
+
+#info {
+    position: absolute;
+    left: 320px; right: 0;
+    background: #f0f0f0;
+}
+
+#main {
+    overflow: auto;
+    position: absolute;
+    top: 112px; bottom: 0;
+    left: 320px; right: 0;
+    padding: 16px;
+}
+
+#main:after {
+    content: " ";
+    display: block;
+    height: 256px;
+}
+
+#more {
+    padding: .5em 0;
+    text-align: center;
+}
+
+#more button {
+    width: 200px;
+    padding: .5em 0;
+}
+
+#filters-keywords div {
+    display: inline-block;
+    width: 45%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#filters-keywords label {
+    display: inline;
+    width: auto;
+}
+
+#filters input[type="submit"] {
+    width: 80%;
+    padding: .5em 0;
+}
+
+/* popup */
+
+.popup {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.popup:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(15, 70, 90);
+    opacity: 0.65;
+}
+
+.popup > div {
+    margin: 0 auto;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+    box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.5);
+}
+
+.popup-top {
+    padding: 0 .3em 0 16px;
+    line-height: 36px;
+    height: 36px;
+}
+
+.popup button {
+    margin: .5em .2em;
+}
+
+/* thumbnail */
+
+.frame {
+    width: 200px;
+    display: inline-block;
+    padding: 20px;
+}
+
+.thumb {
+    display: block;
+    z-index: 0;
+    position: relative;
+    width: 200px;
+    height: 170px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.thumb a {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+    position: absolute;
+    top: 0; right: 0;
+    line-height: 100%;
+    text-shadow: 0px 0px 2px black;
+    padding: 10px;
+    z-index: 1;
+}
+
+.thumb a:hover {
+    color: yellow;
+}
+
+.thumb a:after {
+    content: "\271A"; /* + */
+}
+
+.owned a:after {
+    content: "\2716"; /* x */
+}
+
+.thumb > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* slideshow */
+
+#slideshow {
+    text-align: center;
+}
+
+#slideshow > div {
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+    height: 80%;
+}
+
+#slideshow:after {
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    width: 1px;
+    overflow: hidden;
+}
+
+#slideshow-slide {
+    position: absolute;
+    right: 240px;
+    top: 36px;
+    bottom: 36px;
+    left: 16px;
+    background-image: url(img/tartan.jpg);
+    display: inline-block;
+    text-align: center;
+}
+
+#slideshow-slide:after {
+    content: " ";
+    height: 100%;
+    width: 1px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#slideshow-slide div {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 42px;
+    height: 42px;
+    margin: -21px 0 0 -21px;
+    background: white url(img/preloader.gif) no-repeat center center;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.5);
+}
+
+#slideshow-slide.loading div {
+    display: block;
+}
+
+#slideshow-slide img {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 90%;
+    max-width: 90%;
+}
+
+#slideshow-infos {
+    position: absolute;
+    right: 0;
+    vertical-align: top;
+    display: inline-block;
+    width: 208px; /* 240-16-16 */
+    padding: 0 16px;
+}
+
+#slideshow-infos table {
+    border-collapse: collapse;
+}
+
+#slideshow-infos td {
+    vertical-align: top;
+    padding: 0.5em 0;
+}
+
+#slideshow-infos td:nth-child(odd) {
+    padding-right: 0.5em;
+    color: #888;
+}
+
+#slideshow-infos td:nth-child(even) {
+    width: 100%;
+}
+
+#slideshow-licence {
+    opacity: .5;
+    text-align: center;
+    padding-top: 2em;
+}
+
+#slideshow-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* login */
+
+#login > div {
+    width: 400px;
+    margin-top: 100px;
+}
+
+#login .popup-main {
+    padding: 0 16px;
+}
+
+#login form div:nth-child(-n+2) label {
+    display: inline-block;
+    width: 98px;
+}
+
+#login form div:nth-last-child(-n+2) {
+    padding-left: 101px;
+}
+
+#login p {
+    visibility: hidden;
+    color: red;
+    margin: 1.2em 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
